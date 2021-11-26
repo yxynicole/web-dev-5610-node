@@ -14,6 +14,10 @@ const createMovie = (movie) =>{
     return model.create(movie);
 }
 
+const findMovieById = (id) =>{
+    return model.findById(id);
+}
+
 module.exports ={
-    findAllMovies,deleteMovie,createMovie
+    findAllMovies,deleteMovie,createMovie,findMovieById
 }

@@ -24,7 +24,16 @@ module.exports = (app) => {
         dao.createMovie(req.body).then((insertedMovie) => res.json(insertedMovie));
     }
 
+    // handle HTTP GET request mapped to /rest/movies/:id
+    const findMovieById = (req, res) => {
+        // retrieve movie from database with ID matching ID params
+        // respond to client with movie from database
+        dao.findMovieById(req.params.id)
+            .then(movie => res.json(movie));
+    }
 
+
+    app.get("/rest/movies/:id", findMovieById);
     app.post("/rest/movies", createMovie);
     app.delete("/rest/movies/:id", deleteMovie);
     //listen for HTTP GET and notify findAllMovies
