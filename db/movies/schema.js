@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');                       // load mongoose library
-const schema = mongoose.Schema({                    // create schema
+const schema = new mongoose.Schema({                    // create schema
                                    title: String,           // title property of type String
                                    rating: Number           // rating property of type Number
                                },

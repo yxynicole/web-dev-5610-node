@@ -24,14 +24,18 @@ app.get('/hello',(req,res)=>{
 const movieService = require("./services/movies-service");
 movieService(app);
 
-const tweeterService = require('./services/tweeter-service');
-tweeterService(app);
+//A8
+// const tweeterService = require('./services/tweeter-service');
+// tweeterService(app);
 
 const profileService = require("./services/profile-service");
 profileService(app);
 
-const dbMovieService = require("./movies/service");            // load the movie service and pass it an instance of express
+const dbMovieService = require("./db/movies/service");            // load the movie service and pass it an instance of express
 dbMovieService(app);
+
+const tweeterService = require('./db/tweets/tweeter-service');
+tweeterService(app);
 
 // app.listen(process.env.PORT || 4000)
 app.listen( 4000)
