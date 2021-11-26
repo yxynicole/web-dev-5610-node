@@ -1,4 +1,4 @@
-const mongoose = reequire('mongoose');
+const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/webdev');
 const express = require('express');
 const app = express();
@@ -30,4 +30,8 @@ tweeterService(app);
 const profileService = require("./services/profile-service");
 profileService(app);
 
-app.listen(process.env.PORT || 4000)
+const dbMovieService = require("./movies/service");            // load the movie service and pass it an instance of express
+dbMovieService(app);
+
+// app.listen(process.env.PORT || 4000)
+app.listen( 4000)

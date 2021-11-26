@@ -1,5 +1,5 @@
-const model = require('./model');
-const findAllMovies = () => model.find();
+const model = require('./model');               // load model
+const findAllMovies = () => model.find();      // use model's find function to implement findAllMovies
 module.exports ={
-    findAllMovies
+    findAllMovies                              // export as an API to use in service
 }
