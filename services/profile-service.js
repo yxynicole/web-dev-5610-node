@@ -8,12 +8,9 @@ module.exports = (app) => {
     }
 
     const updateCurrentProfile = (req, res) => {
-        // console.log("profile service-----", req.body);
-        // console.log(" my type is : " +typeof req.body);
         let profile = profiles[0];
         _.extend(profile,req.body);
         res.send(JSON.stringify(profile))
-        // console.log("after updated: ", profile);
     }
 
     app.put('/api/profile', updateCurrentProfile);

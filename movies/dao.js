@@ -17,7 +17,14 @@ const createMovie = (movie) =>{
 const findMovieById = (id) =>{
     return model.findById(id);
 }
+// use the model's updateOne function to
+const updateMovie = (id, movie) =>{
+    // update the movie whose ID is id
+    // update with new movie object
+    return model.updateOne({_id: id},
+                    {$set: movie});
+}
 
 module.exports ={
-    findAllMovies,deleteMovie,createMovie,findMovieById
+    findAllMovies,deleteMovie,createMovie,findMovieById,updateMovie
 }

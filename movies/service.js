@@ -12,7 +12,6 @@ module.exports = (app) => {
 
     // handle HTTP DELETE request mapped to /rest/movies/:id
     const deleteMovie = (req, res) =>{
-        //console.log("server, service.js: ------>", req)
         // remove movie from database with ID matching ID in params
         dao.deleteMovie(req.params.id).then((status) => res.send(status));
     }
@@ -32,7 +31,15 @@ module.exports = (app) => {
             .then(movie => res.json(movie));
     }
 
+    // handle HTTP PUT request
+    const updateMovie = (req, res) => {
+        // retrieve movie from body and ID from request parameter
+        // send update status back to the client
+        dao.updateMovie(req.params.id, req.body)
+            .then(status => res.send(status));
+    }
 
+    app.put("/rest/movies/:id", updateMovie);
     app.get("/rest/movies/:id", findMovieById);
     app.post("/rest/movies", createMovie);
     app.delete("/rest/movies/:id", deleteMovie);
