@@ -17,7 +17,15 @@ module.exports = (app) => {
         dao.deleteMovie(req.params.id).then((status) => res.send(status));
     }
 
+    // handle HTTP POST request
+    const createMovie = (req, res) =>{
+        // get new movie from body and insert into database
+        // respond to client with inserted movie
+        dao.createMovie(req.body).then((insertedMovie) => res.json(insertedMovie));
+    }
 
+
+    app.post("/rest/movies", createMovie);
     app.delete("/rest/movies/:id", deleteMovie);
     //listen for HTTP GET and notify findAllMovies
     app.get("/rest/movies",findAllMovies)

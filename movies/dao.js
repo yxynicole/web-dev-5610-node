@@ -9,6 +9,11 @@ const deleteMovie = (id) =>{
     return model.deleteOne({_id: id});
 }
 
+// implement function to insert a movie into the database
+const createMovie = (movie) =>{
+    return model.create(movie);
+}
+
 module.exports ={
-    findAllMovies,deleteMovie
+    findAllMovies,deleteMovie,createMovie
 }
