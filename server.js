@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/webdev');
 const express = require('express');
+
+const MONGODB_URI = 'mongodb://localhost:27017/webdev';
+mongoose.connect(MONGODB_URI);
+
 const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -28,18 +31,21 @@ movieService(app);
 // const tweeterService = require('./services/tweeter-service');
 // tweeterService(app);
 
-const profileService = require("./services/profile-service");
-profileService(app);
+//A8
+// const profileService = require("./services/profile-service");
+// profileService(app);
 
 const dbMovieService = require("./db/movies/service");            // load the movie service and pass it an instance of express
 dbMovieService(app);
 
-//A9 tweetService
+//A9
 const tweeterService = require('./db/tweets/tweeter-service');
 tweeterService(app);
 
 const whoService = require('./db/who/who-service');
 whoService(app);
 
-// app.listen(process.env.PORT || 4000)
-app.listen( 4000)
+const profileService = require('./db/profile/profile-service');
+profileService(app)
+
+app.listen(process.env.PORT || 4000)
