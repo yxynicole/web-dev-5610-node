@@ -1,0 +1,23 @@
+#Movie.json
+{"_id":{"$oid":"619f30491594cebbff83bd85"},"title":"Dunef","rating":4.9}
+{"_id":{"$oid":"61a0844040926ad13f7f5d5e"},"title":"Aliens","rating":4.5}
+{"_id":{"$oid":"61a0845440926ad13f7f5d5f"},"title":"Terminator","rating":4.8}
+{"_id":{"$oid":"61a0845f40926ad13f7f5d60"},"title":"Avatar","rating":4.7}
+{"_id":{"$oid":"61a1b3f700eff75fbdc6278d"},"title":"hello","__v":0}
+
+#Profile.json
+{"_id":{"$oid":"61a1a5035d56be07b5f44165"},"userName":"Hedwig White","handle":"hedwig","profilePicture":"./hedwig.jpg","bannerPicture":"./forest_banner.jpg","bio":"Hoot hoot. Hoot hoot hoot. ...hoooooot.","website":"lala.com","location":"Boston, MA","dateOfBirth":"7/18/1991","dateJoined":"10/2009","followingCount":"312","followersCount":"180","tweetsCount":"5","__v":0}
+
+#Tweets.json
+{"_id":{"$oid":"61a15786b2317104b31cd586"},"topic":"new tweet","userName":"white","verified":false,"handle":"white","tweet":"test1","stats":{"comments":0,"retweets":0,"likes":0},"posted":{"$date":"2021-11-26T21:54:14.084Z"},"__v":0i}
+{"_id":{"$oid":"61a15789b2317104b31cd588"},"topic":"new tweet","userName":"white","verified":false,"handle":"white","tweet":"test2","stats":{"comments":0,"retweets":0,"likes":0},"posted":{"$date":"2021-11-26T21:54:17.11Z"},"__v":0}
+{"_id":{"$oid":"61a1578db2317104b31cd58a"},"topic":"new tweet","userName":"white","verified":false,"handle":"white","tweet":"test3","stats":{"comments":0,"retweets":0,"likes":0},"posted":{"$date":"2021-11-26T21:54:21.038Z"},"__v":0}
+{"_id":{"$oid":"61a15790b2317104b31cd58c"},"topic":"new tweet","userName":"white","verified":false,"handle":"white","tweet":"test4","stats":{"comments":0,"retweets":0,"likes":0},"posted":{"$date":"2021-11-26T21:54:24.795Z"},"__v":0}
+{"_id":{"$oid":"61a17c45a5a5b3784858c207"},"topic":"new tweet","userName":"white","verified":false,"handle":"white","tweet":"test5","stats":{"comments":0,"retweets":0,"likes":0},"posted":{"$date":"2021-11-27T00:31:01.221Z"},"__v":0}
+
+#who.json
+
+{"_id":{"$oid":"61a1758ab6c0025797245927"},"avatarIcon":"./relativity-space.jpeg","userName":"Relativity Space","handle":"relativityspace"}
+{"_id":{"$oid":"61a175a7b6c0025797245928"},"avatarIcon":"./virgin-galactic.png","userName":"Virgin Galactic","handle":"virgingalactic"}
+{"_id":{"$oid":"61a175adb6c0025797245929"},"avatarIcon":"./nasa.jpeg","userName":"NASA","handle":"NASA"}
+{"_id":{"$oid":"61a175b3b6c002579724592a"},"avatarIcon":"./tesla.png","userName":"Tesla","handle":"Tesla"}
