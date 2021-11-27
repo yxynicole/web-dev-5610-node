@@ -34,8 +34,12 @@ profileService(app);
 const dbMovieService = require("./db/movies/service");            // load the movie service and pass it an instance of express
 dbMovieService(app);
 
+//A9 tweetService
 const tweeterService = require('./db/tweets/tweeter-service');
 tweeterService(app);
+
+const whoService = require('./db/who/who-service');
+whoService(app);
 
 // app.listen(process.env.PORT || 4000)
 app.listen( 4000)
