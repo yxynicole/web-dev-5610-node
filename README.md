@@ -1,3 +1,3 @@
 
-collections.txt contains colletions.
-mongo.log is the log history file.
+`collections.txt` contains colletions.
+`mongo.log` is the log history file.
